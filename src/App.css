@@ -1,234 +1,261 @@
-.App {
-	overflow: hidden;
-	height: 100vh;
-}
 .Header {
-	/* display: grid; */
-	/* grid-template-columns: 1fr 4fr; */
-	/* grid-template-rows: 1fr; */
-	display: flex;
-	height: 100%;
-	/* width: 100vw; */
+  display: flex;
 }
 .Nav {
-	background-color: #fecd45;
-	display: flex;
-	width: 20%;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
+  background-color: #fecd45;
+  width: 20%;
+  flex-shrink: 0; /* Prevent Nav from shrinking */
+  position: fixed; /*Keep Nav fixed*/
+  top: 0; /* Position it at the top */
+  bottom: 0; /* Stretch Nav to the bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
 }
 .Main {
-	color: #444343;
-	background: rgb(244, 251, 255);
-	width: 80%;
-	height: 100%;
-	display: flex;
-	overflow-y: auto;
-	justify-content: center;
+  color: #444343;
+  background: rgb(244, 251, 255);
+  width: 80%;
+  /* height: 100vh; */
+  margin-left: 20%;
+  padding: 20px;
+  display: flex;
+  overflow-y: auto;
+  justify-content: center;
 }
+
 .Std {
-	background-color: #fecd45;
+  background-color: #fecd45;
 }
 .Std-btn {
-	color: #dadada;
-	font-size: 1.4em;
-	border-radius: 5%;
-	width: 120px;
-	padding: 5%;
-	border-width: 2%;
-	background-color: #0035a7;
-	border-style: groove;
-	border-color: #c0c0c0;
+  color: #dadada;
+  font-size: 1.4em;
+  border-radius: 5%;
+  width: 120px;
+  padding: 5%;
+  border-width: 2%;
+  background-color: #0035a7;
+  border-style: groove;
+  border-color: #c0c0c0;
 }
 .Std-btn:hover {
-	transition-duration: 300ms;
-	background-color: #709dff;
-	color: #001320;
-	cursor: pointer;
+  transition-duration: 300ms;
+  background-color: #709dff;
+  color: #001320;
+  cursor: pointer;
 }
 .Footer {
-	display: flex;
-	flex-direction: column;
-	height: 10vh;
-	background-color: #fecd45;
-	color: #1e3262;
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  background-color: #fecd45;
+  color: #1e3262;
 }
 p:first-child {
-	padding: 10px;
+  padding: 10px;
 }
 .Footer a,
 .Footer p {
-	text-align: center;
-	background-color: #fecd45;
-	color: #1e3262;
+  text-align: center;
+  background-color: #fecd45;
+  color: #1e3262;
 }
 .Links-section {
-	margin: 20px 0px;
-	/* padding: 0 6rem; */
-	padding: 0 0 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* margin: 20px 0px; */
+  /* padding: 0 0 5rem 0; */
 }
 .Links {
-	font-size: 25px;
-	text-align: left;
-	margin: 1.5em 6rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  text-align: left;
+  margin: 1.5em 2rem;
+  border: 1px solid #444343;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 5px;
+  align-items: center;
+  transition: transform 0.5s;
+  text-decoration: none;
+  text-align: center;
 }
-a {
-	text-decoration: none;
-	color: #444343;
+.Links:hover {
+  transform: scale(1.05);
+  border: 1px solid #0035a7;
+  box-shadow: 0 0 10px #0035a7;
 }
-a:hover {
-	transition-duration: 300ms;
-	color: #1e3262;
-	/* font-style: italic; */
-	font-weight: 600;
-	/* transition-delay: 0ms; */
-	transition-duration: 0ms;
-	/* text-decoration: underline; */
-	border-bottom: 1px solid #1e3262;
+.Links p {
+  color: #444343;
+  margin-top: 1rem;
 }
-.Videos-section {
-	margin: 1.5em 0px;
-	font-size: 1.5em;
+.Links:hover > p {
+  color: #0035a7;
+  text-shadow: 0 0 0.65px #0035a7;
+  transform: scale(1.05);
+}
+.Links > img {
+  width: 10vw;
+  height: auto;
 }
 .Home {
-	display: flex;
-	flex-direction: column;
-	/* line-height: 100px; */
-	text-align: left;
-	width: 80vw;
-	justify-content: center;
-	gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  height: 100vh;
+  justify-content: center;
+  gap: 4rem;
 }
 .Home h1 {
-	font-size: 2em;
-	padding: 0 6rem;
+  font-size: 2em;
+  padding: 0 6rem;
 }
 .Home h2 {
-	font-size: 4em;
-	padding: 0 6rem;
+  font-size: 4em;
+  padding: 0 6rem;
 }
 .Home p {
-	font-size: 1.3em;
-	font-weight: 700;
-	padding: 0 6rem;
+  font-size: 1.3em;
+  font-weight: 700;
+  padding: 0 6rem;
 }
 ._8th,
 ._9th,
 ._10th,
 ._11th,
 ._12th {
-	width: 80vw;
-	margin-top: 2em;
+  width: 80vw;
+  margin-top: 1em;
 }
 .class h1 {
-	font-size: 3em;
-	margin: 4rem 6rem 0 6rem;
+  font-size: 3em;
+  margin: 0rem 0rem 1rem 2rem;
 }
-/* .waterMark {
-	background-image: url("../public/Images/2.png");
-	background-repeat: no-repeat;
-	height: inherit;
-	width: inherit;
-	position: fixed;
-	z-index: -1;
-	opacity: 0.25;
-	background-position: center;
-	background-size: cover;
-} */
+
 @media (max-width: 768px) and (min-width: 481px) {
-	.Home h2 {
-		font-size: 3em;
-	}
-	.Header {
-		flex-direction: column;
-	}
-	.class h1 {
-		font-size: 2.4em;
-	}
-	.Nav {
-		flex-direction: row;
-		width: 100%;
-		height: 10%;
-	}
-	.Main {
-		width: 100%;
-		height: 90%;
-	}
-	.Footer {
-		display: none;
-	}
-	.Std-btn {
-		height: 3em;
-		width: 4em;
-		font-size: medium;
-	}
-	.Links {
-		font-size: 1.3em;
-	}
-	._8th,
-	._9th,
-	._10th,
-	._11th,
-	._12th {
-		width: 100vw;
-		margin-top: 2em;
-	}
-	.Home {
-		width: 100vw;
-		height: 100vh;
-	}
+  .Home h2 {
+    font-size: 3em;
+  }
+  /* .Home p {
+    padding: 1rem;
+  } */
+  .Header {
+    flex-direction: column;
+  }
+  .class h1 {
+    font-size: 2.4em;
+    margin: 1rem;
+    margin-left: 2rem;
+  }
+  .Nav {
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+  }
+  .Main {
+    width: 100%;
+    height: 90%;
+    margin: 0;
+  }
+  .Footer {
+    display: none;
+  }
+  .Std-btn {
+    height: 3em;
+    width: 4em;
+    font-size: medium;
+  }
+  .Links {
+    font-size: 1.3em;
+  }
+  .Links-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  ._8th,
+  ._9th,
+  ._10th,
+  ._11th,
+  ._12th {
+    width: 100vw;
+    margin-top: 2em;
+  }
+  .Home {
+    width: 100vw;
+    height: 100vh;
+  }
 }
 @media (max-width: 480px) {
-	.Home h1 {
-		font-size: 1.5em;
-	}
-	.Home {
-		width: 100vw;
-		height: 100vh;
-	}
-	.class h1 {
-		font-size: 2.2em;
-	}
-	.Home h2 {
-		font-size: 2em;
-	}
-	.Home p {
-		font-size: 1em;
-		line-height: 3em;
-	}
-	.Header {
-		flex-direction: column;
-	}
-	.Nav {
-		flex-direction: row;
-		width: 100%;
-		height: 10%;
-	}
-	.Main {
-		height: 90%;
-		width: 100%;
-		justify-content: space-around;
-	}
-	.Footer {
-		display: none;
-	}
-	.Std-btn {
-		height: 2em;
-		width: 3.5em;
-		font-size: small;
-	}
-	.Links {
-		font-size: 1.3em;
-		align-items: center;
-		justify-content: center;
-	}
-	._8th,
-	._9th,
-	._10th,
-	._11th,
-	._12th {
-		width: 100vw;
-		margin-top: 2em;
-	}
+  .Home h1 {
+    font-size: 1.5em;
+    padding: 1rem;
+  }
+  .Home {
+    width: 100vw;
+    height: 100vh;
+    gap: 1rem;
+  }
+  .class h1 {
+    font-size: 1.8em;
+    margin: 1rem;
+    margin-left: 2rem;
+  }
+  .Home h2 {
+    font-size: 2em;
+    padding: 1rem;
+  }
+  .Home p {
+    font-size: 1em;
+    line-height: 1.5rem;
+    padding: 1rem;
+  }
+  .Header {
+    flex-direction: column;
+  }
+  .Nav {
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+  }
+  .Main {
+    height: 90%;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0;
+  }
+  .Footer {
+    display: none;
+  }
+  .Std-btn {
+    height: 2em;
+    width: 3.5em;
+    font-size: small;
+  }
+  .Links {
+    font-size: 1.3em;
+    align-items: center;
+    justify-content: center;
+  }
+  .Links > img {
+    width: 100px;
+    height: auto;
+  }
+  .Links > p {
+    font-size: 1rem;
+  }
+  .Links-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  ._8th,
+  ._9th,
+  ._10th,
+  ._11th,
+  ._12th {
+    width: 100vw;
+    margin-top: 2em;
+  }
 }

@@ -1,16 +1,19 @@
+import { Link } from "react-router-dom";
 import "../App.css";
+import React from "react";
+import { animateScroll as scroll } from "react-scroll";
 function Standard(props) {
-	const clickHandler = () => {
-		console.log(props.val);
-		props.fun(props.val);
-	};
-
-	return (
-		<div className="Std">
-			<button onClick={clickHandler} className="Std-btn">
-				{props.name}
-			</button>
-		</div>
-	);
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+  return (
+    <div className="Std">
+      <Link to={props.path}>
+        <button className="Std-btn" onClick={scrollToTop}>
+          {props.name}
+        </button>
+      </Link>
+    </div>
+  );
 }
 export default Standard;
